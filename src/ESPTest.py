@@ -26,14 +26,14 @@ com_port = None
 
 ports = serial.tools.list_ports.comports()
 
-for port in ports:
-    if "ESP32test" in port.description:
+'''for port in ports:
+    if "GyroScroll" in port.description:
         com_port = port.device
         break
 
 if com_port is None:
     print("Port Finding Failed...Please Configure Manually.")
-    exit()
+    exit()'''
 
 port= serial.Serial(com_port,baudrate=115200,parity=serial.PARITY_NONE,stopbits=serial.STOPBITS_ONE,timeout=1)
 
